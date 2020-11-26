@@ -1,40 +1,33 @@
-/* Implementar un programa que imprima todos los números que hay
-entre dos números introducidos por el usuario comenzando por el
+/* Implementar un programa que imprima todos los nï¿½meros que hay
+entre dos nï¿½meros introducidos por el usuario comenzando por el
 menor y su suma.
 */
 
-#include <iostream>            
+#include <stdio.h>
 #include <stdlib.h>
 
-using namespace std;
-int mostrar(int a, int b){
-    int max=0, min=0;
-    
- if(a>b){
-           max=a; min=b;
+int main (){
+    int max = 0, min = 0, i = 0;
+    int a, b;
+
+    printf("\n Ingresar el limite 1 >>");
+    scanf("%d", &a);
+    printf("\n Ingresar el limite 2 >>");
+    scanf("%d", &b);
+
+        
+    if (a > b) {
+        max = a; 
+        min = b;
+    } else {
+        max= b; 
+        min = a;
     }
     
+    printf("\n Los numeros comprendidos entre [%d:%d] son: \n", max, min);
+    for(i = min; i<= max; i++){
+        printf("%d \t", i);
+    }
 
- else {
-     max=b; min=a;
-     }
-     
-     for(int i=min;i<=max; i++){
-             cout<<i<<"-";
-             }
-             
-             cout<<"\n";
-               
-}
-
-int main (){
-    int a,b;
-    cout<<"Ingrese numero: "; cin>>a;
-    cout<<"Ingrese numero: "; cin>>b;
-    
-    cout<<"Los numeros comprendidos de "<<a<< " hacia "<<b<<" son:";
-    mostrar(a,b);
-    system("PAUSE");
     return 0;
-
 }
