@@ -1,13 +1,13 @@
 /*Ejercicio 4
-Implementar un algoritmo que cuente el número de caractéres captados
-desde teclado, determinar si es un dígito o un carácter o un espacio,
-e imprimir por pantalla estos número según el tipo*/
+Implementar un algoritmo que cuente el nï¿½mero de caractï¿½res captados
+desde teclado, determinar si es un dï¿½gito o un carï¿½cter o un espacio,
+e imprimir por pantalla estos nï¿½mero segï¿½n el tipo*/
 
 #include <conio.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-//_______Función para la limpieza de buffer_________
+//_______Funciï¿½n para la limpieza de buffer_________
 
 void flush_in(){
 	
@@ -50,6 +50,7 @@ int main(){
 		//fflush(stdin);
 	}while(opc==1);
 	printf("Gracias!\n");
+	printf("\nAutor:Michelle PÃ©rez Sosa Grupo 13");
 	system("pause");
 	return 0;
 }

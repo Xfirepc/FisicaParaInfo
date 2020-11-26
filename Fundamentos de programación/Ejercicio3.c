@@ -28,6 +28,7 @@ int main(){
 		printf("Escriba la opcion: ");
 		scanf("%d",&opc);
 	}while(opc==1);
+	printf("\nAutor:Michelle Pérez Sosa Grupo 13");
 	return 0;
 	
 }

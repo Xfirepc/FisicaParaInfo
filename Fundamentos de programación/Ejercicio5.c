@@ -75,6 +75,7 @@ int main() {
 		}
 		
 		printf("\n El resultado de la operacion es: %d \n", result);
+		printf("\nAutor:Michelle Pérez Sosa Grupo 13");
 		system("pause");
 		system("cls");
 		

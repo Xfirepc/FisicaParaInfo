@@ -222,5 +222,6 @@ int main() {
 		system("pause");
 		system("cls");
     } while(op != 0);
+	printf("\nAutor:Michelle Pérez Sosa Grupo 13");
 	return 0;
 }

@@ -19,6 +19,7 @@ int main () {
     flush_in();
      
 	printf("El texto ingresado es: %s", texto);
+    printf("\nAutor:Michelle Pérez Sosa Grupo 13");
 
 	return 0;
 }

@@ -28,6 +28,6 @@ int main (){
     for(i = min; i<= max; i++){
         printf("%d \t", i);
     }
-
+    printf("\nAutor:Michelle Pérez Sosa Grupo 13");
     return 0;
 }
