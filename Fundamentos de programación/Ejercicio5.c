@@ -32,6 +32,7 @@ int main() {
 		
 		if (op != 0) {
             printf("\n Ingresar numero 1: ");
+            scanf("%d", &num1);
             printf("\n Ingresar numero 2: ");
             scanf("%d", &num2);
         }
