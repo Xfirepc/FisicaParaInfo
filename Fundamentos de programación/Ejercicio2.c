@@ -1,7 +1,7 @@
-/* Implementar un programa que imprima todos los n�meros que hay
-entre dos n�meros introducidos por el usuario comenzando por el
-menor y su suma.
-*/
+/* Ejercicio 2 
+Implementar un programa que imprima todos los n�meros que hay entre dos 
+n�meros introducidos por el usuario comenzando por el menor y su suma.*/
+
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -9,10 +9,11 @@ menor y su suma.
 int main (){
     int max = 0, min = 0, i = 0;
     int a, b;
-
-    printf("\n Ingresar el limite 1 >>");
+    printf("-----------------EJERCICIO 2-------------------\n");
+	printf("\n Numeros comprendidos entre limites");
+    printf("\n Ingresar el limite 1 >> ");
     scanf("%d", &a);
-    printf("\n Ingresar el limite 2 >>");
+    printf("\n Ingresar el limite 2 >> ");
     scanf("%d", &b);
 
         

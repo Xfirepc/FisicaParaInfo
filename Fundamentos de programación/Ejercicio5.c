@@ -26,7 +26,7 @@ int menuOperaciones() {
 
 int main() {
 	int result, op, num1, num2;
-	
+	printf("-----------------EJERCICIO 5-------------------\n");
 	do {
 		op = menuOperaciones();
 		

@@ -1,4 +1,3 @@
-
 /* Ejercicio 1
 Implementar un programa que  pida un texto al usuario y lo escriba por pantalla */
 
@@ -13,7 +12,7 @@ void flush_in()
 int main () {
 	
 	char texto[200];
-	
+	printf("-----------------EJERCICIO 1-------------------\n");
 	printf("Ingrese un texto: ");
     scanf("%199[^\n]", texto);
     flush_in();

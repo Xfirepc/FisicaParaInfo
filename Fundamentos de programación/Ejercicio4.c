@@ -27,7 +27,6 @@ int main(){
 	//char respuesta[1];
 	printf("-----------------EJERCICIO 4-------------------\n");
 	do{
-		printf("-------------------------------------------\n");
 		printf("Escribe un caracter, un digito o un espacio: ");
 		scanf("%c",&respuesta);
 		if (respuesta >='a' && respuesta <='z') { 

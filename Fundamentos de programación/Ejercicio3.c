@@ -9,10 +9,9 @@ ppor pantalla si es positivo o negativo*/
 int main(){
 	int number;
 	int opc;
-	printf("Ejercicio 3: \n");
-	printf("-------------------------------\n");
+	printf("-----------------EJERCICIO 3-------------------\n");
 	do{
-		printf("Introduzca un numero entero \n");
+		printf("Introduzca un numero entero >> ");
 		scanf("%d",&number);
 		if(number==0||number==-0){
 			printf("El numero %d no tiene signo \n",number);
