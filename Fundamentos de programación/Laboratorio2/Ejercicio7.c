@@ -1,7 +1,8 @@
 
-/*Ejercicio 6
-Finalmente implementar un algoritmo que generar un menú con 5 opciones. 
-La elección de cada opción del menú ejecuta que corresponde a su número dentro del laboratorio. */
+/*Ejercicio 7
+Finalmente implementar un algoritmo que generar un menú con 6
+opciones. La elección de cada opción del menú ejecuta cada ejercicio
+anterior 1,2,3,4,5,6 con funciones */
 
 #include <stdio.h>
 #include <windows.h>
@@ -19,29 +20,12 @@ void flush_in(){
 int menuProgramas() {
 	int op;
 	printf("\n*** Menu de opciones ***");
-	printf("\n 1. Ejercicio 1: Imprimir texto ingresado por pantalla");
-	printf("\n 2. Ejercicio 2: Imprimir numeros comprendidos entre extremos");
-	printf("\n 3. Ejercicio 3: Imprimir si un numero positivo o negativo");
-	printf("\n 3. Ejercicio 4: Contar caracteres digitos, caracteres, espacio.");
-	printf("\n 3. Ejercicio 5: Operacion solicida por usuario suma, resta, etc.");
-	printf("\n 3. Ejercicio 6: Operacion solicida por usuario suma, resta, etc.");
-	printf("\n 0. Salir");
-	printf("\n Escojer opcion >> ");
-
-	scanf("%d", &op);
-    flush_in();
-	return op;
-}
-
-// Menu de operaciones que usa el ejercicio 6
-int menuOperaciones() {
-	int op;
-	printf("\n*** Menu de operaciones ***");
-	printf("\n 1. Suma");
-	printf("\n 2. Resta");
-	printf("\n 3. Multiplicacion");
-	printf("\n 4. Division");
-	printf("\n 5. Modulo");
+	printf("\n 1. Ejercicio 1: Numeros divisibles y primos de un vector");
+	printf("\n 2. Ejercicio 2: Programa de palabra palindromo");
+	printf("\n 3. Ejercicio 3: Subcadena en una cadena nueva");
+	printf("\n 3. Ejercicio 4: Positivos y diagonal de una matriz 4x4");
+	printf("\n 3. Ejercicio 5: Transpuesta de una matriz nxm");
+	printf("\n 3. Ejercicio 6: Simular un cajero para descglosar billetes.");
 	printf("\n 0. Salir");
 	printf("\n Escojer opcion >> ");
 
@@ -68,63 +52,17 @@ void ejercicio4() {
 }
 
 void ejercicio5() {
-    int result, op, num1, num2;
-	printf("-----------------EJERCICIO 5-------------------\n");
-	do {
-		op = menuOperaciones();
-		
-		if (op != 0) {
-            printf("\n Ingresar numero 1: ");
-            scanf("%d", &num1);
-            printf("\n Ingresar numero 2: ");
-            scanf("%d", &num2);
-        }
-		
-		switch(op) {
-			case 1:
-				result = num1 + num2;
-				break;
-			
-			case 2:
-				result = num1 - num2;
-				break;
-				
-			case 3:
-				result = num1 * num2;
-				break;
-				
-			case 4:
-				if (num2 != 0) {
-					result = num1 / num2;
-				} else {
-					printf("\n Imposible dividir para 0 \n\n");
-					continue;
-				}
-				break;
-				
-			case 5:
-				if (num2 != 0) {
-					result = num1 % num2;
-				} else {
-					printf("\n Imposible obtener modulo de una division para 0 \n\n");
-					continue;
-				}
-				break;
-			
-			default: 
-				printf("\n Opcion desconocida.");
-				continue;
-				break;
-		}
-		
-		printf("\n El resultado de la operacion es: %d \n", result);
-	} while (op != 0);
+
+}
+
+void ejercicio5() {
+
 }
 
 
 int main() {
     int op;
-    printf("-----------------EJERCICIO 6-------------------\n");
+    printf("-----------------EJERCICIO 7-------------------\n");
     do {
         op = menuProgramas();
 		switch(op) {
@@ -142,6 +80,8 @@ int main() {
 				break;
 			case 5:
 				ejercicio5();
+			case 6:
+				ejercicio6();
 				break;
 			default:
 				break;
