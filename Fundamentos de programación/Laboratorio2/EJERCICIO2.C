@@ -38,6 +38,7 @@ else printf("\nLa palabra no es palindroma!\n");
    
     
     printf("\n\n");
+    system("pause");
     return 0;
 }
 

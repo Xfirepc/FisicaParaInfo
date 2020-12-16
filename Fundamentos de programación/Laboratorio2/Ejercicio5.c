@@ -41,5 +41,8 @@ int main() {
         }
         printf("\n");
     }
+    
+    printf("\n\n");
+    system("pause");
     return 0;
 }	

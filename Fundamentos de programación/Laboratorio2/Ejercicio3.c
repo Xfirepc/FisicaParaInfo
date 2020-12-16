@@ -1,4 +1,4 @@
-/*Ejercicio 5
+/*Ejercicio 3
 Escribir un algoritmo para determinar si una subcadena especificada 
 ocurre en una cadena dada, y si es así, escribir un asterisco (*) 
 en la primera posición de cada ocurrencia.*/
