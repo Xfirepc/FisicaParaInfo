@@ -1,5 +1,5 @@
-/* Diseñar una función que informe si una cadena es un palíndromo (una
-cadena es un palíndromo si se lee igual de izquierda a derecha que de
+/* Diseï¿½ar una funciï¿½n que informe si una cadena es un palï¿½ndromo (una
+cadena es un palï¿½ndromo si se lee igual de izquierda a derecha que de
 derecha a izquierda). Ejemplo: radar*/
 
 #include<stdio.h>
@@ -11,7 +11,8 @@ int main()
     int p_i, p_f;
     char Palabra[MAX], caracter;
     int i;
-    
+    printf("-----------------EJERCICIO 2-------------------\n");
+
     printf("\nIntroduzca la palabra: ");
     scanf("%c", &caracter);
     i=0;
