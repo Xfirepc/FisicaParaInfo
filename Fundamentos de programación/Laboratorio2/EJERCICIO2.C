@@ -1,45 +1,47 @@
-/* Dise�ar una funci�n que informe si una cadena es un pal�ndromo (una
-cadena es un pal�ndromo si se lee igual de izquierda a derecha que de
+/* Ejercicio 2
+Diseñar una función que informe si una cadena es un palíndromo (una
+cadena es un palíndromo si se lee igual de izquierda a derecha que de
 derecha a izquierda). Ejemplo: radar*/
 
-#include<stdio.h>
-#include<stdlib.h>
-#define MAX 25
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
 
-int main()
-{
-    int p_i, p_f;
-    char Palabra[MAX], caracter;
-    int i;
+#define MAX 50
+
+int isPalindrome(char*, size_t);
+
+int main() {
+    char cadena[MAX];
+
     printf("-----------------EJERCICIO 2-------------------\n");
+    printf("Ingrese la cadena a verificar: ");
+    scanf(" %199[^\n]%*[^\n]%*c", cadena);
 
-    printf("\nIntroduzca la palabra: ");
-    scanf("%c", &caracter);
-    i=0;
-    while(i<MAX && caracter !='.')
-    {
-    Palabra [i]=caracter;
-    i++;
-    scanf("%c", &caracter);
-}
-   
-   p_i=0;
-   p_f=i-1;
-   
-   while(p_i<p_f && Palabra[p_i]==Palabra[p_f])
-   {
-                 p_i++;
-                 p_f--;
-}
+    printf("\n");
+    isPalindrome(cadena, strlen(cadena));
 
-if(p_i>=p_f) printf("\nLa palabra es palindroma!\n");
-else printf("\nLa palabra no es palindroma!\n");
-              
-   
-    
     printf("\n\n");
     system("pause");
     return 0;
 }
 
+int isPalindrome(char* buf, size_t len) {
+    size_t i = 0;
+    size_t j = len;
+    char a;
+    char b;
 
+    while (j > i) {
+        a = tolower(buf[i++]);
+        b = tolower(buf[--j]);
+
+        if (a != b) {
+            printf("La palabra NO es palindroma");
+            return -1;
+        }
+    }
+
+    printf("La palabra SI es palindroma!");
+    return 0;
+}
