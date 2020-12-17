@@ -23,7 +23,6 @@ int menuProgramas() {
 	printf("\n Escojer opcion >> ");
 
 	scanf("%d", &op);
-    flush_in();
 	return op;
 }
 
@@ -72,6 +71,20 @@ int isPalindrome(char* buf, size_t len) {
     return 0;
 }
 
+void cuenta_billetes_monedas(int cantidad, int valor[]) 
+{
+    int i = 0, n;
+    while (cantidad > 0) 
+    {
+        n = cantidad / valor[i];
+        cantidad = cantidad % valor[i];
+        if (n > 0) {
+            printf("%d billetes/monedas de %d euros \n", n, valor[i]);
+        }
+        i++;
+    }
+}
+
 
 int ejercicio1 () {
 	int i, numeros[100];
@@ -88,29 +101,141 @@ int ejercicio1 () {
 	numeros_primos(numeros, i);
 	printf("\n Numeros divisibles para 2 y 3: ");
 	numeros_divisibles(numeros, i);
-
-	printf("\n\n");
-	system("pause");
 }
 
 void ejercicio2() {
+	char cadena[50];
 
+    printf("-----------------EJERCICIO 2-------------------\n");
+    printf("Ingrese la cadena a verificar: ");
+    scanf(" %199[^\n]%*[^\n]%*c", cadena);
+
+    printf("\n");
+    isPalindrome(cadena, strlen(cadena));
 }
 
 void ejercicio3() {
+	printf("-----------------EJERCICIO 3-------------------\n");
+    char cadena[100], subcadena[100];
+    int i, j, subcadlen, aux, contains = 0, cont = 0;
 
+    printf("Ingrese la cadena principal: ");
+    scanf(" %199[^\n]%*[^\n]%*c", cadena);
+
+    printf("Ingrese la subcadena: ");
+    scanf(" %199[^\n]%*[^\n]%*c", subcadena);
+    printf("\n\n");
+
+    subcadlen = strlen(subcadena);
+
+    for(i = 0; i < strlen(cadena); i++) {
+        aux = i;
+        for(j = 0; j < subcadlen; j++) {
+            if (cadena[aux] == subcadena[j]) {
+                aux++; cont++;
+                if (cont == subcadlen)
+                    contains = 1;
+            } else break;
+        }
+        if (contains == 1) {
+            printf("*");
+        } else {
+            printf("%c", cadena[i]);
+        }
+       contains = 0;
+       cont = 0;
+    }
 }
 
 void ejercicio4() {
+int i, j, dim = 0;
+	int diagonal = 0;
+	printf("-----------------EJERCICIO 4-------------------\n");
+	printf("Ingrese la dimension de la matriz: ");
+	scanf("%d", &dim);
 
+	int matriz[dim][dim], positivos[dim * 2];
+
+	for (i = 0; i < dim; i++) {
+		for (j = 0; j < dim; j++) {
+			printf("Ingrese la posicion [%d][%d] >> ", i, j);
+            scanf("%d", &matriz[i][j]);
+			if (i == j) 
+				diagonal = diagonal + matriz[i][j];
+		}
+	}
+
+	printf("\n Matriz de positivos \n");
+
+    for(i= 0; i < dim; i++){
+        for(j = 0; j < dim; j++){
+			if (matriz[i][j] > 0)
+            	printf("\t %d", matriz[i][j]);
+			else 
+            	printf("\t *");
+        }
+        printf("\n");
+    }
+
+	printf("\n La suma de la diagonal es: %d", diagonal);
 }
 
 void ejercicio5() {
+	printf("-----------------EJERCICIO 6-------------------\n");
 
+    int cols, rows, i ,j;
+    printf("Ingrese el numero de filas de la matriz: ");
+    scanf("%d", &rows);
+    printf("Ingrese el numero de columnas de la matriz: ");
+    scanf("%d", &cols);
+
+    int matriz[rows][cols];
+
+    for(i= 0; i < rows; i++){
+        for(j = 0; j < cols; j++){
+            printf("Ingrese la posicion [%d][%d] >> ", i, j);
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+
+    printf("Matriz normal \n");
+    for(i= 0; i < rows; i++){
+        for(j = 0; j < cols; j++){
+            printf("\t %d", matriz[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("Matriz transpuesta \n");
+    for(i= 0; i < cols; i++){
+        for(j = 0; j < rows; j++){
+            printf("\t %d", matriz[j][i]);
+        }
+        printf("\n");
+    }
 }
 
-void ejercicio6() {
+int ejercicio6() {
+	int valor[9] = { 500, 200, 100, 50, 20, 10, 5, 2, 1 };
+    int cantidad, op;
+    
+    printf("-----------------EJERCICIO 6-------------------\n");
+    do {
+        printf ("\nIntroduce una cantidad de euros (sin centimos): ");
+        scanf ("%d", &cantidad);
+        printf ("\n");
 
+        if (cantidad <= 0){
+            printf ("ERROR: La cantidad debe ser mayor que cero.\n");
+            system ("pause");
+            return -1;
+        }
+        cuenta_billetes_monedas(cantidad, valor);
+
+        printf ("\nDesea desglosar otra cantidad? (Si = 1, No = 0):  ");
+        scanf("%d", &op);
+    } while(op == 1);
+    return 0;
 }
 
 
@@ -134,6 +259,7 @@ int main() {
 				break;
 			case 5:
 				ejercicio5();
+				break;
 			case 6:
 				ejercicio6();
 				break;

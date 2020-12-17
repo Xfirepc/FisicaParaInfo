@@ -33,4 +33,26 @@ int main(){
 	return 0;
 }
 
+void numeros_primos(int vector[], int n) 
+{
+	int i, j, cont = 0;
+	for (i = 0; i < n; i++) {
+		for (j = 1; j <= vector[i]; j++) {
+			if (vector[i] % j == 0) cont++;
+		}
+		if (cont == 2) {
+			printf("%d \t", vector[i]);
+		}
+		cont = 0;
+	}
+}
 
+void numeros_divisibles(int vector[], int n) 
+{
+	int i;
+	for (i = 0; i < n; i++) {
+		if (vector[i] % 2 == 0 && vector[i] % 3 == 0) {
+			printf("%d \t", vector[i]);
+		}
+	}
+}
